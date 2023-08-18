@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <title>Портфолио</title>
+</head>
+<body class="animate__animated animate__fadeInDownBig" >
+  <div id="loader"></div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<section id="about">
+  <div class="content">
+    <h1>Junior Продакт Менеджер</h1>
+    <p>Обо мне: <br>
+      Привет! Меня зовут Дима и я начинающий продакт менеджер, я <a href="https://gopractice.ru/course/pm/certificate/ohwnwpoz" target="_blank">прошёл курс "Управление продуктом на основе данных
+      от GoPractice</a> и сейчас учусь на 2-ом курсе в ВШЭ на двойной специальности "Менеджмент" и "Прикладная математика и информатика". Моя средняя оценка 7/10 в ВУЗе.<br>
+      Я умею писать код на Python и простые запросы SQL. Также умею делать дизайн эксперимента при когортном анализе и A/B-тестировании, и проверять результаты с помощью математической статистики.
+      Имею некий фундамент насмотренности решений разных задач и гипотез, благодаря проектной деятельности и чтению разных кейсов.
+
+
+    </p>
+    <div class="buttons">
+      <a class="resume-button" href="Резюме Junior Product Manager Охлопков Дмитрий.pdf" download>
+        <i class="fas fa-download"></i> Скачать резюме
+      </a>
+      <a class="view-button" href="https://docs.google.com/document/d/1WS4xD4Mysg5tnwEYupoD_lGBdAptm1ZFfQkKHW3yIs0/edit?usp=sharing">
+        <i class="fas fa-eye"></i> Просмотреть онлайн
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="projects">
+    <div class="content">
+      <h2>Мои проекты</h2>
+      <div class="projects-container">
+        <a class="project" href="https://drive.google.com/drive/folders/1smEgKBEDrUni2bML2B5RNQuB9hMvEhxt?usp=sharing" target="_blank">
+          <div class="project-overlay"></div>
+          <img src="dodo.png" alt="Проект 1">
+          <h3>Анализ рынка Саудовской Аравии</h3>
+          <p>Тестовое задание в школу менеджеров Додо 2023</p>
+        </a>
+        <a class="project" href="https://drive.google.com/drive/folders/1c31GVC-o79XpcZ878sKyaeh7eZwp3BFy?usp=drive_link" target="_blank">
+          <div class="project-overlay"></div>
+          <img src="ozon.png" alt="Проект 2">
+          <h3>Анализ конкурентов Ozon</h3>
+          <p>Исследовательский проект для партнера учебной программы OZON.<br>
+          Результат: 9/10</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="content">
+      <h2>Контакты</h2>
+      <p></p>
+      <div>
+        <a>email: </a><a href="mailto:okhlopkovdm@gmail.com" target="_blank">okhlopkovdm@gmail.com</a>
+        <button class="copy-button" onclick="copyEmail()">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+      <div>
+        <a>telegram: </a><a href="https://t.me/tmokkus" target="_blank">@tmokkus</a>
+        <button class="copy-button" onclick="copyTelegram()">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+      <div>
+        <a>телефон: </a><a href="tel:89811831530" target="_blank">+7 (981) 183-1530</a>
+        <button class="copy-button" onclick="copyPhone()">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Продакт Менеджер</p>
+  </footer>
+
+  <script>
+    // Loader fade-out animation
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('loader').classList.add('fade-out');
+    });
+
+
+    // Copy email to clipboard
+    function copyEmail() {
+      const email = "okhlopkovdm@gmail.com";
+      copyToClipboard(email);
+    }
+
+    // Copy telegram username to clipboard
+    function copyTelegram() {
+      const telegram = "@tmokkus";
+      copyToClipboard(telegram);
+    }
+
+    // Copy phone number to clipboard
+    function copyPhone() {
+      const phone = "+7 (981) 183-1530";
+      copyToClipboard(phone);
+    }
+
+    // Helper function to copy text to clipboard
+    function copyToClipboard(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("Скопировано: " + text);
+    }
+  </script>
+</body>
+</html>
